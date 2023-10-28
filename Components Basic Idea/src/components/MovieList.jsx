@@ -1,11 +1,12 @@
 import movies from "../assets/movies";
 import Movie from "./Movie";
+import Heading from "./Heading";
 export default function MovieList(props){
   
    
      return(
   <div className="movie-list">
-     <h2>{props.headingText}</h2>
+     <Heading>{props.headingText}</Heading>
    
     <ul>
       <li><Movie date={props.movies[0]}/></li>
