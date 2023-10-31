@@ -19,10 +19,6 @@ function App() {
        <Timer startTime={5} />
        
 
-
-
-
-
       <MovieList movies={movies} headingText="Movie List"/>
     </div>
   )
