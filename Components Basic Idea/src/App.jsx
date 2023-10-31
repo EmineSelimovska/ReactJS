@@ -13,7 +13,11 @@ function App() {
       <div>
        <h1>My first Dynamic React Application</h1>
 
-       <Timer/>
+       <Timer startTime={5} />
+       <Timer startTime={6} />
+       <Timer startTime={7} />
+
+
 
 
 
