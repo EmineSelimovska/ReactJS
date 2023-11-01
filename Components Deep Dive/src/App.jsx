@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './App.css'
+import styles from './App.module.css';
 
 
 function App() {
@@ -37,9 +37,15 @@ function App() {
     <div>
       <h3>Count: {count}</h3>
       <ul>
-        {numbers.map((number, index) => <li data-key={index} key={index}>{number * 2}</li>)}
+        {numbers.map((number, index) =>
+         <li 
+         data-key={index}
+         key={index}
+         className={styles.listItem}
+          >
+          {number * 2}</li>)}
       </ul>
-      <button onClick={onClick}>Remove</button>
+      <button style={{marginRight: '10px'}} onClick={onClick}>Remove</button>
       <button onClick={() => setCount(c => c + 1)}>+</button>
 
     </div>
