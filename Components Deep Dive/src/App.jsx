@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import styles from './App.module.css';
-
+import Starwars from './Starwars';
 
 function App() {
 
@@ -19,7 +19,7 @@ function App() {
   useEffect(() => {
 
 
-    setTimeout(() => setCount(s => s + 1), 1000);
+   // setTimeout(() => setCount(s => s + 1), 1000);
 
 
   }, [count])
@@ -35,6 +35,8 @@ function App() {
   return (
 
     <div>
+
+      <Starwars/>
       <h3>Count: {count}</h3>
       <ul>
         {numbers.map((number, index) =>
