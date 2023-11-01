@@ -13,6 +13,9 @@ export default function TodoList(props){
         .catch(err => console.log(err))
     },[])
     
+    const changestatusHandler = (todoId) => {
+        setTodos(state => state.map(todo => todo._id == todoId ? {...todo, isCompleted: !todo.isCompleted} : todo))
+    }
     return(
         <section className="todo-list-container">
         <h1>Todo List</h1>
@@ -45,8 +48,10 @@ export default function TodoList(props){
             {todos.map(todo => (
               <Todo
                  key={todo._id}
+                 _id={todo._id}
                  text={todo.text}
                  isCompleted={todo.isCompleted}
+                 changestatusHandler={changestatusHandler}
               />
             ))}
 
